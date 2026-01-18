@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- ANA KISIM -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstanbul Bant</title>
+    
+    <!-- CSS Dosyası -->
+    <link rel="stylesheet" href="css/bicimler.css">
+    
+    <!-- Fontlar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Anahtar Kelimeler -->
+    <meta name="keywords" content="yara bandı, yara, bant, istanbul">
+    <meta name="description" content="Yerli ve Milli Yara Bantları">
+</head>
+<body>
+
+    <!-- ÜST MENÜ -->
+    <div class="ustMenu">
+        <div class="sol">
+            <h1>İstanbul Bant</h1>
+        </div>
+        
+        <div class="orta">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Ara..." aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit" style="background-color: blue;">
+                    <img src="resimler/icons8-searching-24.png" alt="search">
+                </button>
+            </form>
+        </div>
+
+        <div class="sag">
+            <img src="resimler/logo.svg" alt="istanbullogo">
+        </div>
+    </div>
+
+    <!-- MENÜ KISMI -->
+    <!-- Hamburger Menü Butonu -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#urunler">Ürünler</a></li>
+            <li><a href="#footer">Şikayet & Geri Dönüş</a></li>
+            <li><a href="#footer">İletişim</a></li>
+        </ul>
+    </div>
+
+    <!-- CAROUSEL CONTAINER -->
+    <div class="carousel-container">
+        <!-- CAROUSEL SLIDES WRAPPER -->
+        <div class="carousel-slides" id="carouselSlides">
+            
+            <!-- Slide 1 -->
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="resimler/18103e6c-54c1-4598-8566-ec223d3816da.png" alt="Corrugated Rolls">
+                </div>
+                <div class="slide-content">
+                    <div class="subtitle">HER AN YANINIZDA</div>
+                    <h1>SEVGİYLE İYİLEŞTİRİR<br></h1>
+                    <p>En küçük çizikten en derin sızıya kadar, cildinize nefes aldıran esnek yapısıyla her adımda yanınızdayız. Şimdi koruma kalkanınızı %30 indirimle keşfedin!</p>
+                    <a href="#urunler" class="cta-button">ŞİMDİ KORU</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="resimler/5669c5fb-a5fe-47b5-ae8f-720ebce9a73c.png" alt="Medical Bandages">
+                </div>
+                <div class="slide-content">
+                    <div class="subtitle">ULTRA DAYANIKLI SERİ</div>
+                    <h1>HAREKETİNİ<br>KISITLAMA</h1>
+                    <p>Suya dayanıklı ve ekstra güçlü yapışkan formülüyle en hareketli günlerde bile yerinden oynamaz. Siz sınırları zorlayın, biz yaraları saralım.</p>
+                    <a href="#urunler" class="cta-button">GÜCÜ HİSSET</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="resimler/994e3dc8-b147-489a-80bc-5b13e380b8dc.png" alt="Adhesive Tape">
+                </div>
+                <div class="slide-content">
+                    <div class="subtitle">YENİ NESİL TEKNOLOJİ</div>
+                    <h1>HIZLI VE ŞEFFAF<br>KORUMA</h1>
+                    <p>Görünmez dokusu ve hipoalerjenik yapısıyla yaranızı dış dünyadan tamamen izole edin. İz bırakmayan iyileşme süreci için hemen sipariş verin.</p>
+                    <a href="#urunler" class="cta-button">İNCELE & SATIN AL</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow left" onclick="moveSlide(-1)">‹</button>
+        <button class="carousel-arrow right" onclick="moveSlide(1)">›</button>
+
+        <!-- Dots -->
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- CAROUSEL JAVASCRIPT -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const carouselSlides = document.getElementById('carouselSlides');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        // Dots oluştur
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateSlide() {
+            carouselSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Dots güncelle
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        // Otomatik kaydırma (2 saniyede bir)
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
+<!-- 
+--------------------------------------------- Alt görsel kısmı --------------------------------------------------
+-->
+
+<div class="altgorsel">
+
+    <img src="resimler/bana bir türk özel hastane çiz.jpg" alt="resim1">
+    <img src="resimler/bana bir türk özel hastane çiz (1).jpg" alt="resim2">
+    <img src="resimler/bana bir türk özel hastane çiz (2).jpg" alt="resim3">
+    <img src="resimler/bana bir türk özel hastane çiz (3).jpg" alt="resim4">
+    <img src="resimler/bana bir türk özel hastane yatakhane çiz.jpg" alt="resim5">
+
+</div>
+
+
+
+
+<!-- 
+--------------------------------------------- Alt İçerik Kısmı --------------------------------------------------
+-->
+
+    <div class="altIcerik">
+        
+        <div class="baslik">
+            <h3>Biz Kimiz?</h3>
+            <p>
+                İstanbul Bant, medikal ve günlük kullanım için geliştirilmiş yenilikçi bant çözümleriyle sağlığınızı her an destekler.
+                Cilt dostu yapısı, esnek tasarımı ve uzun süreli koruma sağlayan teknolojisiyle en küçük çizikten yoğun günlük kullanıma kadar her durumda yanınızdadır.
+
+                Sağlık profesyonelleriyle iş birliği içinde geliştirilen ürünlerimiz; klinik onaylı, dermatolojik testlerden geçmiş ve hassas ciltlere uygundur. Sporculardan sağlık çalışanlarına, çocuklardan yetişkinlere kadar geniş bir kullanıcı kitlesine güvenle hitap eder.
+
+                İstanbul Bant’ta amacımız yalnızca korumak değil;
+                sevgiyle iyileştirmek.
+                Kalite, güven ve konforu bir araya getirerek cildinizin nefes almasına izin veren çözümler sunuyoruz.
+                <br>
+                👉 Siz de sağlığınızı güvenle korumak için İstanbul Bant ürünlerini keşfedin.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="cizgi"></div>
+
+
+
+    <div class="urunler" id="urunler">
+
+        <div class="urun">
+
+            <h4 id="urunler">Fırsatlı Ürünler</h4>
+
+
+            <div class="UrunlerIlk">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="resimler/asker.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Askeri Bant</h5>
+                            <p class="card-text" id="metin2">Askeri yaralarda işinize yaricak profesörler tarafından üretilen şahane bir ürün</p>
+                            <a href="#" class="btn btn-primary" id="fiyatbuton">Yılbaşına Özel SADECE <b style="color: chartreuse;">6$</b></a>
+                        </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="resimler/0dea73c4-5ddb-4c0f-a7bb-870624c51c18.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Çiçekli Tatlı Bant</h5>
+                            <p class="card-text" id="metin2">Güzel, hoş bir tarz isteyenlere<br> <br></p>
+                            <a href="#" class="btn btn-primary" id="fiyatbuton">Yılbaşına özel SADDECEE <b style="color: chartreuse;">2$</b></a>
+                        </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="resimler/4de10cb0-edb3-4063-8168-3f06c38ae47d.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Gökkuşağı bant </h5>
+                            <p class="card-text" id="metin3">her cinslere uygun yara bandı <br> <br> <br></p>
+                            <a href="#" class="btn btn-primary" id="fiyatbuton">Yılbaşına Özel SADECE <b style="color: chartreuse;">1$</b></a>
+                        </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="resimler/18103e6c-54c1-4598-8566-ec223d3816da.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Türk Halı Motifli Bant</h5>
+                            <p class="card-text" id="metin4">Türk ve Milliyetçilere özel</p>
+                            <a href="#" class="btn btn-primary" id="fiyatbuton">SADECE <b style="color: chartreuse;">15$</b></a>
+                        </div>
+                </div>
+
+
+
+            </div>
+            
+
+            
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+     <!-- FOOTER -->
+<footer class="main-footer" id="footer">
+    <div class="footer-content">
+        <!-- ABOUT SECTION -->
+        <div class="footer-section">
+            <div class="footer-logo">İstanbul Bant</div>
+            <p class="footer-desc">
+                Sevgiyle iyileştiren, güvenle koruyan yara bantları. Türkiye'nin en kaliteli medikal çözümleri.
+            </p>
+            <div class="social-icons" >
+                <a href="#" class="social-icon instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon youtube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon twitter" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon tiktok" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-section">
+            <h3>Hızlı Erişim</h3>
+            <ul>
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#sss">SSS</a></li>
+            </ul>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="footer-section">
+            <h3>Yasal</h3>
+            <ul>
+                <li><a href="#gizlilik">Gizlilik Politikası</a></li>
+                <li><a href="#kullanim">Kullanım Şartları</a></li>
+                <li><a href="#cerez">Çerez Politikası</a></li>
+                <li><a href="#iade">İade & İptal</a></li>
+                <li><a href="#kvkk">KVKK</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="footer-section" id="#iletişim">
+            <div class="contact-form">
+                <h3>Bize Ulaşın</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Gönder</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 İstanbul Bant. Tüm hakları saklıdır. | Sevgiyle yapıldı <span class="heart">❤️</span></p>
+    </div>
+</footer>
+
+<!-- Font Awesome için HEAD'e ekle -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Footer JavaScript -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.submit-btn');
+        const originalText = btn.innerHTML;
+        
+        btn.innerHTML = '<span>✓ Gönderildi!</span>';
+        btn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = 'linear-gradient(45deg, #FDB813, #feb204)';
+            this.reset();
+        }, 2000);
+    });
+
+    const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'scale(1.02)';
+        });
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'scale(1)';
+        });
+    });
+
+    document.querySelectorAll('.social-icon').forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const ripple = document.createElement('div');
+            ripple.style.position = 'absolute';
+            ripple.style.width = '100%';
+            ripple.style.height = '100%';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255,255,255,0.6)';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'rippleEffect 0.6s ease-out';
+            
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+</script>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+</script> 
+</body>
+</html>
